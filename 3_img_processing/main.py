@@ -1,3 +1,5 @@
+import cv2
+
 print("""
 --------- Processamento de Imagens ---------\n
 Neste módulo será aprendido:
