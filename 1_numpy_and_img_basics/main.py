@@ -1,5 +1,5 @@
 import numpy as np
-import cv2
+import matplotlib.pyplot as plt
 
 """
 Objetivos da seção:
@@ -43,8 +43,8 @@ print(f"Cópia: {copia} / Endereço: {hex(id(copia))}")
 
 print("\n-------- O que é uma imagem? --------\n")
 print("""
-Cinza: Uma matriz bi-dimensional (height x width) de pixels, em que cada pixel armazena um valor de 0 até 255 (escuro -> claro)\n
-COlorida: Uma matriz tri-dimensional (height x width x 3_color_channels), cada canal tem o valor variando de 0 a 255
+Cinza: Uma matriz bi-dimensional (height x width) de pixels, em que cada pixel armazena um valor de 0 até 255 (escuro -> claro)
+Colorida: Uma matriz tri-dimensional (height x width x 3_color_channels), cada canal tem o valor variando de 0 a 255
 """)
 
 print("\n-------- Imagens e NumPy --------\n")
