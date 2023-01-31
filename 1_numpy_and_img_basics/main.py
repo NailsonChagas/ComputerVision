@@ -24,10 +24,10 @@ print(f"Blank 2x2x2 matrix:\n {np.zeros(shape=(2,2,2))}")
 
 print(f"\nRandom array: {np.random.randint(0, 100, 10)}")
 
-array = np.arange(0,100)
-matrix = array.reshape(10,10)
-print(f"\nReshape array:\n {matrix}") #array de 100 elementos para matriz 10x10
-print(f"Shape: {array.reshape(10,10).shape}")
+array = np.arange(0,50)
+matrix = array.reshape(5,10)
+print(f"\nReshape array:\n {matrix}") #array de 50 elementos para matriz 5x10
+print(f"Shape: {matrix.shape}")
 print(f"Slicing: do décimo elemento para frente\n {array[10:]}")
 print(f"Slicing: do décimo elemento para trás\n {array[:10]}")
 print(f"Slicing: todos elementos da linha 1 da matriz\n {matrix[1,:]}")
