@@ -77,3 +77,5 @@ while True:
     if cv2.getWindowProperty("PUPPY", cv2.WND_PROP_VISIBLE) < 1:
             break
 cv2.destroyAllWindows()
+
+print("\n--------- Desenhando textos e poligonos na imagem ---------\n")
