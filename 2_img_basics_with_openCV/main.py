@@ -130,3 +130,6 @@ cv2.polylines(
 
 plt.imshow(blank_img)
 plt.show()
+
+print("\n--------- Desenhando com o mouse ---------\n")
+print("Continua no outro arquivo")
