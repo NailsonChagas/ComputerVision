@@ -8,4 +8,4 @@ Avidades desenvolvidas durante o curso da udemy: https://www.udemy.com/course/py
 
 ## Comandos importantes:
 - Instalar dependencias: pip install -r requirements.txt
-- Passar dependencias instaladar para um arquivo: pip freeze > requirements.txt
+- Passar dependencias instaladas para um arquivo: pip freeze > requirements.txt
