@@ -46,3 +46,8 @@ resized = cv2.resize(img_RGB, (1000, 400))
 print(resized.shape)
 plt.imshow(resized)
 plt.show()
+
+resized = cv2.resize(img_RGB, (0, 0), img_RGB, 0.5, 0.5) #diminuindo imagem em 50%
+print(resized.shape)
+plt.imshow(resized)
+plt.show()
