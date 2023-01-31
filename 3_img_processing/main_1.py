@@ -122,3 +122,8 @@ plt.show()
 blended = cv2.addWeighted(exemplo_threshold, 0.6, exemplo_adapt_threshold, 0.4, 0)
 plt.imshow(blended, cmap='gray')
 plt.show()
+
+print("""
+--------- Blurring and Smoothing ---------\n
+Continua no proximo arquivo
+""")
