@@ -64,3 +64,7 @@ plt.show()
 new = cv2.flip(img_RGB, -1) #inverte nos dois eixos
 plt.imshow(new)
 plt.show()
+
+print("\n--------- Salvar Imagens ---------\n")
+img_BGR = cv2.cvtColor(new, cv2.COLOR_RGB2BGR)
+cv2.imwrite('nova.jpg', img_BGR)
