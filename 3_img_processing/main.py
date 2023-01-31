@@ -58,3 +58,67 @@ print("""
 de maneira em que se possa mostrar apenas as formas gerais 
 dos objetos desejados na imagem
 """)
+
+rainbow = cv2.imread('./rainbow.jpg', 0) #gray
+plt.imshow(rainbow, cmap='gray')
+plt.show()
+
+ret, rainbow_threshold = cv2.threshold(
+    rainbow, 
+    127, #abaixo disso zerar, acima recebe o valor abaixo: (255 no caso)
+    255, 
+    cv2.THRESH_BINARY
+)
+
+plt.imshow(rainbow_threshold, cmap='gray')
+plt.show()
+
+ret, rainbow_threshold = cv2.threshold(
+    rainbow, 
+    127, 
+    255, 
+    cv2.THRESH_BINARY_INV
+)
+
+plt.imshow(rainbow_threshold, cmap='gray')
+plt.show()
+
+ret, rainbow_threshold = cv2.threshold(
+    rainbow, 
+    127, 
+    255, 
+    cv2.THRESH_TRUNC
+)
+
+plt.imshow(rainbow_threshold, cmap='gray')
+plt.show()
+
+exemplo = cv2.imread('./crossword.jpg', 0)
+plt.imshow(exemplo, cmap='gray')
+plt.show()
+
+ret, exemplo_threshold = cv2.threshold(
+    exemplo, 
+    127, 
+    255, 
+    cv2.THRESH_BINARY
+)
+
+plt.imshow(exemplo_threshold, cmap='gray')
+plt.show()
+
+exemplo_adapt_threshold = cv2.adaptiveThreshold(
+    exemplo,
+    255,
+    cv2.ADAPTIVE_THRESH_MEAN_C,
+    cv2.THRESH_BINARY,
+    11,
+    8
+)
+
+plt.imshow(exemplo_adapt_threshold, cmap='gray')
+plt.show()
+
+blended = cv2.addWeighted(exemplo_threshold, 0.6, exemplo_adapt_threshold, 0.4, 0)
+plt.imshow(blended, cmap='gray')
+plt.show()
