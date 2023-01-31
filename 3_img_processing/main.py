@@ -1,4 +1,5 @@
 import matplotlib.pyplot as plt
+import numpy as np
 import cv2
 
 print("""
@@ -44,3 +45,9 @@ DOG2 = cv2.flip(DOG1, 1)
 blended = cv2.addWeighted(DOG1, 0.5, DOG2, 0.5, 0)
 plt.imshow(blended)
 plt.show()
+
+print("""
+--------- Blending and Pasting - Masks ---------\n
+Como substituir apenas uma parte da imagem?  
+Usando uma mascara, pesquisar melhor como fazer
+""")
