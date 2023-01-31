@@ -1,3 +1,5 @@
+import cv2
+
 """
 Objetivos da seção:
     - Começar a entender o uso do OpenCV
