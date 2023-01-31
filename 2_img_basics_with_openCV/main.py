@@ -51,3 +51,16 @@ resized = cv2.resize(img_RGB, (0, 0), img_RGB, 0.5, 0.5) #diminuindo imagem em 5
 print(resized.shape)
 plt.imshow(resized)
 plt.show()
+
+print("\n--------- Girar Imagens ---------\n")
+new = cv2.flip(img_RGB, 0) #inverte horizontalmente
+plt.imshow(new)
+plt.show()
+
+new = cv2.flip(img_RGB, 1) #inverte verticalmente
+plt.imshow(new)
+plt.show()
+
+new = cv2.flip(img_RGB, -1) #inverte nos dois eixos
+plt.imshow(new)
+plt.show()
