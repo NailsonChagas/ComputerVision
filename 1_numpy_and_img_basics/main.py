@@ -1,5 +1,6 @@
 import numpy as np
 import matplotlib.pyplot as plt
+from PIL import Image
 
 """
 Objetivos da seção:
@@ -48,3 +49,29 @@ Colorida: Uma matriz tri-dimensional (height x width x 3_color_channels), cada c
 """)
 
 print("\n-------- Imagens e NumPy --------\n")
+picture = Image.open("./índice.jpg")
+picture_matrix = np.asarray(picture)
+print(picture_matrix.shape) # sera (height, width, 3), 3 devido a RGB
+plt.imshow(picture_matrix)
+plt.show()
+
+picture_red_channel = picture_matrix.copy()[:,:,0] #bi-dimensional R - 0 a 255
+plt.imshow(picture_red_channel, cmap='gray')
+plt.show()
+
+picture_green_channel = picture_matrix.copy()[:,:,1]#bi-dimensional G - 0 a 255
+plt.imshow(picture_red_channel, cmap='gray')
+plt.show()
+
+picture_blue_channel = picture_matrix.copy()[:,:,2]#bi-dimensional B - 0 a 255
+plt.imshow(picture_red_channel, cmap='gray')
+plt.show()
+
+picture_matrix_aux = picture_matrix.copy()
+picture_matrix_aux[:,:,0] = 0
+plt.imshow(picture_matrix_aux)
+plt.show()
+
+picture_matrix_aux[:,:,1] = 0
+plt.imshow(picture_matrix_aux)
+plt.show()
