@@ -51,3 +51,10 @@ print("""
 Como substituir apenas uma parte da imagem?  
 Usando uma mascara, pesquisar melhor como fazer
 """)
+
+print("""
+--------- Image Thresholding ---------\n
+- Converter imagem em cores binaria (branco e preto)
+de maneira em que se possa mostrar apenas as formas gerais 
+dos objetos desejados na imagem
+""")
