@@ -68,3 +68,11 @@ plt.show()
 print("\n--------- Salvar Imagens ---------\n")
 img_BGR = cv2.cvtColor(new, cv2.COLOR_RGB2BGR)
 cv2.imwrite('nova.jpg', img_BGR)
+
+print("\n--------- Mostrar Imagens com OpenCV ---------\n")
+while True:
+    cv2.imshow('PUPPY', img_BGR)
+    key = cv2.waitKey(10) #recebe a tecla clicada após 10ms
+    if key != -1: print(key)
+    if cv2.getWindowProperty("PUPPY", cv2.WND_PROP_VISIBLE) < 1:
+            break
