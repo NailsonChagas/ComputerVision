@@ -90,7 +90,17 @@ cv2.rectangle(
 cv2.circle(blank_img, center=(250, 250), radius=30, color=(255,0,0), thickness=2)
 cv2.circle(blank_img, center=(250, 250), radius=10, color=(255,0,0), thickness=-1)
 cv2.line(blank_img, pt1=(0,0), pt2=(500,500), color=(0,0,255))
-cv2.line(blank_img, pt1=(0,500), pt2=(500,0), color=(0,0,255))
+cv2.line(blank_img, pt1=(0,500), pt2=(500,0), color=(0,0,255), thickness=2)
+
+cv2.putText(
+    blank_img,
+    text="TESTE",
+    org=(10, 475),
+    fontFace=cv2.FONT_HERSHEY_SIMPLEX,
+    fontScale=3,
+    thickness=2,
+    color=(255,255,255)
+)
 
 plt.imshow(blank_img)
 plt.show()
