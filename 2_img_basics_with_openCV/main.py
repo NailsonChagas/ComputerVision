@@ -76,3 +76,4 @@ while True:
     if key != -1: print(key)
     if cv2.getWindowProperty("PUPPY", cv2.WND_PROP_VISIBLE) < 1:
             break
+cv2.destroyAllWindows()
