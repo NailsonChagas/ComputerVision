@@ -104,3 +104,29 @@ cv2.putText(
 
 plt.imshow(blank_img)
 plt.show()
+
+print("\n--------- Desenhando poligono customizado ---------\n")
+blank_img = np.zeros(shape=(512,512,3), dtype=np.int32)
+
+vertices = np.array(
+    [
+        [100,300], 
+        [200,200], 
+        [400,300], 
+        [200, 400]
+    ], 
+    dtype=np.int32
+)
+
+pontos = vertices.reshape((-1,1,2))
+
+cv2.polylines(
+    blank_img, 
+    pts = [pontos], 
+    isClosed=True, 
+    color=(255,255,0), 
+    thickness=5
+)
+
+plt.imshow(blank_img)
+plt.show()
