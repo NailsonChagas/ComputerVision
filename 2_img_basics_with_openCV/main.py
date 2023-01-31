@@ -38,3 +38,11 @@ img_gray = cv2.imread('./puppy.jpg', cv2.IMREAD_GRAYSCALE)
 print(type(img_gray), img_gray.shape)
 plt.imshow(img_gray, cmap='gray')
 plt.show()
+
+print("\n--------- Redimensionando Imagens ---------\n")
+print(img_RGB.shape)
+
+resized = cv2.resize(img_RGB, (1000, 400))
+print(resized.shape)
+plt.imshow(resized)
+plt.show()
