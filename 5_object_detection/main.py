@@ -31,4 +31,14 @@ Tipos de de detecção de objetos:
     * Utiliza Haar Cascades para detectar faces em imagens
     * Isso não é reconhecimento facial (para isso será utilizado Deep Learn)
 """)
+      
+print("""
+----------- Template Matching -----------\n
+- Forma mais simples de detecção de objetos
+- Simplesmente percorre uma imagem maior procurando a existencia
+de uma determinada imagem menor
+- A principal opção que pode ser ajustada é o método de comparação
+entre o objeto e a imagem
+- Todos os métodos utilizam algum tipo de métrica de correção
+""")
 
