@@ -42,3 +42,7 @@ entre o objeto e a imagem
 - Todos os métodos utilizam algum tipo de métrica de correção
 """)
 
+full_image = cv2.imread('./sammy.jpg')
+full_image = cv2.cvtColor(full_image, cv2.COLOR_BGR2RGB)
+plt.imshow(full_image)
+plt.show() 
