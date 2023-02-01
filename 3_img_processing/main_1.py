@@ -124,6 +124,6 @@ plt.imshow(blended, cmap='gray')
 plt.show()
 
 print("""
---------- Blurring and Smoothing ---------\n
-Continua no proximo arquivo
+--------- Blurring and Smoothing / Morphological Operators ---------\n
+Ver video do curso, fala de estratégias para tirar ruido da imagem
 """)
