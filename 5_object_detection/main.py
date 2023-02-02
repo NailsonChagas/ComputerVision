@@ -106,5 +106,45 @@ if TemplateMatching:
 if CornerDetection:
     print("""
     ----------- Corner Detection -----------\n
-
+    - O que é um canto?
+        * Um canto pode ser definido como a junção de duas beiradas, com a beirada
+        sendo uma mudança subita de claridade na imagem
+    - Estara sendo utilizado dois dos mais populares algoritmos:
+        * Harris Corner Detection:
+            $ Passa do pressuposto que um canto pode ser detectado procurando
+            por mudanças significativas em todas as direções
+        * Shi-Tomasi Corner Detection:
+            $ É uma modificação do Harris Corner Detection
     """)
+
+    flat_chess = cv2.imread("./flat_chessboard.png")
+    flat_chess = cv2.cvtColor(flat_chess, cv2.COLOR_BGR2RGB)
+    plt.imshow(flat_chess)
+    plt.show() 
+
+    gray_flat_chess = cv2.cvtColor(flat_chess, cv2.COLOR_RGB2GRAY)
+    plt.imshow(gray_flat_chess, cmap='gray')
+    plt.show() 
+
+    real_chess = cv2.imread("./real_chessboard.jpg")
+    real_chess = cv2.cvtColor(real_chess, cv2.COLOR_BGR2RGB)
+    plt.imshow(real_chess)
+    plt.show() 
+
+    gray_real_chess = cv2.cvtColor(real_chess, cv2.COLOR_RGB2GRAY)
+    plt.imshow(gray_real_chess, cmap='gray')
+    plt.show() 
+
+    gray = np.float32(gray_flat_chess)
+    dst = cv2.cornerHarris(gray, blockSize=2, ksize=3, k=0.04)
+    dst = cv2.dilate(dst, None)
+    flat_chess[dst>0.01*dst.max()] = [255,0,0]
+    plt.imshow(flat_chess)
+    plt.show() 
+
+    gray = np.float32(gray_real_chess)
+    dst = cv2.cornerHarris(gray, blockSize=2, ksize=3, k=0.04)
+    dst = cv2.dilate(dst, None)
+    real_chess[dst>0.01*dst.max()] = [255,0,0]
+    plt.imshow(real_chess)
+    plt.show() 
